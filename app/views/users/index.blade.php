@@ -14,6 +14,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Name</th>
+            <th>Address1</th>
         </tr>
     </thead>
 
@@ -25,6 +26,7 @@
             <td>{{ $user->email }}</td>
             <td>{{ $user->phone }}</td>
             <td>{{ $user->name }}</td>
+              <td>{{ $user->address->address1 }}</td>
             <td>{{ link_to_route('users.edit', 'Edit',
  array($user->id), array('class' => 'btn btn-info')) }}</td>
             <td>

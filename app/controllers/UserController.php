@@ -9,8 +9,9 @@ class UserController extends \BaseController {
      */
     public function index() {
 
-        $users = User::all();
-
+        $users = User::with('address')->get();
+        $a=$users->toarray();
+      //  echo '<pre>';print_r($a); exit;
         return View::make('users.index', compact('users'));
     }
 

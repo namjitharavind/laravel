@@ -32,5 +32,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'phone' => 'required',
         'name' => 'required|min:5',
     );
-
+    
+    
+    
+    public function address()
+    {
+        return $this->hasOne('Address');
+       // return $this->hasOne('Address', 'user_id', 'id');
+    }
 }
